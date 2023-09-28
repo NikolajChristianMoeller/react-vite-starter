@@ -1,5 +1,10 @@
-export default function Member() {
+export default function Member({ member }) {
     return (
-        <p>This is a Member Component 🎉</p>
-    )
+        <article>
+            <p>
+                {member.firstName} {member.lastName}
+            </p>
+            <a href={`mailto:${member.email}`}>{member.email}</a>
+        </article>
+    );
 }
